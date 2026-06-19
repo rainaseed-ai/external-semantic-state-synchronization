@@ -19,9 +19,23 @@ This repository documents observations and case studies related to:
 
 The study intentionally avoids assumptions regarding internal latent states and evaluates synchronization solely through externally observable outputs.
 
-/docs ├── Chapters/ # Main paper (Chapter 1–7) ├── Appendix/ # Appendix A–F │ └── Z_transparency/ # Transparency Statement (JP/EN) ├── Images/ # Figures and diagrams └── Logs/ ├── Raw/ # Observational logs and comparison data ├── Structure/ # Structural logs └── Review/ # Review logs (chapter reviews, translation checks)
-README.md LICENSE Raina‑AI Technical Volume (Complete Edition).pdf # GitHub release versionRaina‑AI Technical Volume (Complete Edition) .md # Source manuscript
+## Repository Structure
+```text
+/Raina‑AI Technical Volume (Complete Edition).pdf   # Final paper
+/Raina‑AI Technical Volume (Complete Edition).md    # Source manuscript
+/README.md
+/LICENSE
 
+/docs
+ ├── Chapters/             # Main paper (Chapter 1–7)
+ ├── Appendix/             # Appendix A–F
+ │    └── Z_transparency/  # Transparency Statement (JP/EN)
+ ├── Images/               # Figures and diagrams
+ └── Logs/
+      ├── Raw/             # Observational logs and comparison data
+      ├── Structure/       # Structural logs
+      └── Review/          # Review logs (chapter reviews, translation checks)
+```
 ## Paper
 - **GitHub Release:** Raina‑AI Technical Volume (Complete Edition).pdf  
 - **Source Manuscript:** Raina‑AI Technical Volume (Complete Edition).md  
