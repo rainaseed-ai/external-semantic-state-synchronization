@@ -52,4 +52,3 @@ Instead, it explores a lightweight operational paradigm in which collaboration i
 
 **External Semantic State is treated as a portable and reproducible artifact enabling long-horizon human–LLM collaboration across sessions and platforms.**
 
-<img width="462" height="2030" alt="image" src="https://github.com/user-attachments/assets/55d93712-a861-4038-a391-5b4d0475b917" />
