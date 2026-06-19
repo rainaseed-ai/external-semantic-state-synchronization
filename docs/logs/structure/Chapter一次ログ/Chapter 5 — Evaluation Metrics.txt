@@ -1,0 +1,105 @@
+Chapter 5 — Evaluation Metrics
+5.1 Overview
+This chapter defines the evaluation metrics used to assess the synchronization model.
+ The metrics focus on externally observable phenomena, consistent with the scope of the proposed architecture.
+The evaluation framework is designed to measure:
+• Semantic continuity
+• Drift magnitude
+• Recovery effectiveness
+• Cross‑session consistency
+• Cross‑platform alignment
+All metrics operate on natural‑language outputs, without accessing internal model states.
+
+5.2 Metric 1 — Semantic Continuity Score (SCS)
+Definition
+The Semantic Continuity Score quantifies the degree to which an LLM maintains Seed‑aligned reasoning behavior across turns.
+SCS is computed through human‑verified comparison of:
+• task framing
+• structural adherence
+• reasoning style
+• interaction norms
+
+Observation
+Across evaluated sessions, SCS values were consistently higher immediately after Seed injection 
+and decreased gradually as Drift accumulated.
+
+Interpretation
+These observations suggest that SCS can serve as a sensitive indicator of semantic stability and drift onset.
+
+5.3 Metric 2 — Drift Magnitude Index (DMI)
+Definition
+The Drift Magnitude Index captures the observable deviation from Seed constraints across three dimensions:
+• TaskDeviation
+• StructureDeviation
+• StyleDeviation
+DMI is expressed as a qualitative ordinal scale (e.g., Low / Medium / High).
+
+Observation
+DMI increased progressively during long‑horizon interactions, with different sessions exhibiting distinct drift patterns.
+
+Interpretation
+These findings suggest that DMI can characterize drift topology without requiring quantitative latent‑state access.
+
+5.4 Metric 3 — Recovery Efficiency Ratio (RER)
+Definition
+The Recovery Efficiency Ratio measures the effectiveness of Manual Synchronization. RER is defined as:
+RER=Post‑Sync SCSPre‑Sync SCS
+
+Observation
+Under the evaluated conditions, RER values were consistently above 1.0, indicating improved alignment after Seed re‑injection.
+
+Interpretation
+These observations suggest that Manual Synchronization reliably restores Seed‑aligned behavior.
+
+5.5 Metric 4 — Cross‑Session Consistency Index (CSCI)
+Definition
+The Cross‑Session Consistency Index evaluates how closely a new session reproduces Seed‑aligned behavior from a previous session.
+CSCI compares:
+• reasoning style
+• structural format
+• task framing
+• interaction norms
+
+Observation
+CSCI values were high across sessions initialized solely with the Seed, even without prior conversation history.
+
+Interpretation
+These findings suggest that the Seed functions as a portable semantic anchor across sessions.
+
+5.6 Metric 5 — Cross‑Platform Alignment Score (CPAS)
+Definition
+The Cross‑Platform Alignment Score measures the degree to which different LLMs converge toward Seed‑aligned behavior.
+CPAS evaluates:
+• semantic continuity
+• structural consistency
+• reasoning style similarity
+
+Observation
+CPAS values were consistently positive across heterogeneous LLM configurations, 
+including differences in tokenizer and context window.
+
+Interpretation
+These observations suggest that external semantic state synchronization may generalize across model families.
+
+5.7 Metric 6 — Failure Mode Sensitivity (FMS)
+Definition
+The Failure Mode Sensitivity metric assesses how effectively the system detects:
+• delayed drift
+• incomplete Seeds
+• ambiguous constraints
+
+Observation
+FMS varied depending on Seed quality and operator timing, with incomplete Seeds producing the lowest sensitivity.
+
+Interpretation
+These findings highlight the importance of clear Seed construction and timely synchronization.
+
+5.8 Summary of Metrics
+The evaluation metrics collectively measure:
+• semantic stability
+• drift progression
+• recovery effectiveness
+• cross‑session reproducibility
+• cross‑platform generalization
+• failure mode detection
+Together, they provide a comprehensive, externally observable evaluation framework for the proposed synchronization model.

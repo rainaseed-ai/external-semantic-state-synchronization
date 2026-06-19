@@ -1,0 +1,34 @@
+# External Semantic State Synchronization
+### A Behavioral and Empirical Framework for Observable LLM State Synchronization
+
+**（外部意味状態同期：観測可能なLLM同期の行動主義的・経験科学的フレームワーク）**
+
+### Author
+Raina-ai  
+Independent Researcher: Raina
+
+### Version
+This document is a preprint and has not undergone peer review.  
+v1.0 — June 19, 2026
+
+### Keywords
+External Semantic State; Seed; Behavioral Synchronization;  
+Human–LLM Collaboration; Drift Recovery; Cross-Platform Continuity
+
+### Abstract
+
+Large language models (LLMs) exhibit systematic drift during long‑horizon interactions, leading to degraded task framing, structural inconsistency, and loss of alignment with user‑defined objectives. Existing approaches—such as long‑context architectures, retrieval‑augmented generation, and persistent memory—primarily focus on extending or supporting model context rather than explicitly managing behavioral continuity across sessions and platforms.
+
+This work introduces **External Semantic State Synchronization**, an operational framework that stabilizes LLM behavior through a compact, human‑interpretable external state (**“Seed”**). The framework defines drift, synchronization, and recovery entirely through externally observable natural‑language outputs, avoiding assumptions about latent representations. We present a platform‑agnostic synchronization architecture, empirical case studies of drift and recovery, and a qualitative evaluation framework grounded in observable behavior.
+
+Observations across multiple LLMs consistently suggest that drift is recoverable, that external semantic state can reliably reinitialize aligned behavior, and that cross‑session and cross‑platform continuity is feasible without internal state access. These findings position external semantic state as a lightweight control layer for human–LLM collaboration.
+
+By treating semantic state as an external, portable, observable, and reproducible artifact, this work provides a practical foundation for reproducible, interpretable, and platform‑agnostic LLM operations in long‑horizon tasks.
+
+### Affiliation
+Raina-ai Research Project GitHub: https://github.com/rainaseed-ai
+
+
+### Transparency Note
+
+All primary observation logs (cut excerpts), Seed materials, case‑study images, and evaluation procedures are publicly available to ensure **transparency, reproducibility, and verifiability.**

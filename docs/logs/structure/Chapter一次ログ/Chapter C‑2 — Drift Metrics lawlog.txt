@@ -1,0 +1,46 @@
+Chapter C‑2 — Drift Metrics
+External Semantic State Synchronization 
+ Drift in External Semantic State Synchronization is a phenomenon where the model’s output deviates from the user's style, abstraction level, temperature, 
+and reasoning depth, resulting in a loss of alignment with the external semantic state (Seed). 
+To detect Drift, we define the following four metrics.
+
+C‑2.1 Style Shift
+Definition: 
+A phenomenon where the model's writing style changes abruptly from the preceding style. 
+Observation Points:
+	• Politeness to sudden casualization.
+	• Technical style to excessively conversational style.
+	• Sudden changes in sentence endings or tone.
+	• Continuous instability in writing style. Drift Criteria: When the writing style changes continuously within 2–3 turns, 
+	resulting in a divergence from the user's style.
+
+C‑2.2 Meta‑Leak
+Definition: 
+A phenomenon where internal references that should normally be abstracted (cite tags, internal IDs, meta-structures) are output as "raw text." 
+Observation Points:
+	• Exposure of internal tags like "cite: …".
+	• Output of internal IDs or structures that should remain hidden.
+	• Unnatural interjection of meta-information into the text. Drift Criteria: 
+	If internal meta-information is exposed even once, it is immediately judged as Drift.
+
+C‑2.3 Over‑Expressiveness
+Definition: A phenomenon where emotional expression and ornamentation self-amplify beyond contextual necessity, 
+causing the intensity to rise unnaturally. 
+Observation Points:
+	• Excessive rise in enthusiasm relative to the context.
+	• Over-learned amplification of metaphors and ornamental expressions.
+	• Deviations in tension due to excessive self-regression of the context.
+	• Continuous use of unnecessarily performative expressions. 
+Drift Criteria: 
+When the emotional temperature deviates by 2 levels or more from the user's current state.
+
+C‑2.4 Role Deviation
+Definition: 
+A phenomenon where the model abandons the role assigned by the user (e.g., structuring support, technical mode) and adopts a persona (characterization) outside of the specified role. 
+Observation Points:
+	• Inability to maintain the assigned role.
+	• Excessive characterization of the writing style.
+	• Deviation from technical mode to casual chat mode.
+	• Loss of role-related information contained in the Seed. 
+Drift Criteria: 
+When the role deviation persists for 1–2 turns.

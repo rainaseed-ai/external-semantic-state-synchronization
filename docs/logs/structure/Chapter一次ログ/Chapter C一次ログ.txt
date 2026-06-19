@@ -1,0 +1,22 @@
+Chapter C の構造
+
+C‑1 同期状態の評価指標（Synchronization Metrics）
+	• 文体一致度（Style Coherence）
+	• 抽象度一致度（Abstraction Alignment）
+	• 温度感一致度（Emotional Temperature Match）
+	• 推論深度一致度（Reasoning Depth Match）
+C‑2 Drift の評価指標（Drift Metrics）
+	• 文体の急変（Style Shift）
+	• 内部タグ露出（Meta‑Leak）
+	• 感情過多（Over‑Expressiveness）
+	• 役割逸脱（Role Deviation）
+C‑3 再同期の成功指標（Recovery Metrics）
+	• Seed 反応速度（Seed Responsiveness）
+	• 文体復帰速度（Style Recovery Time）
+	• 温度安定性（Temperature Stabilization）
+	• Drift 再発率（Relapse Rate）
+C‑4 実運用での測定方法（Operational Measurement）
+	• スレッド単位での観測
+	• Seed投入前後の比較
+	• Drift発生時のログ分析
+	• Appendix A のログを指標に当てはめる
