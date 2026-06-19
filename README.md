@@ -20,11 +20,11 @@ This repository documents observations and case studies related to:
 The study intentionally avoids assumptions regarding internal latent states and evaluates synchronization solely through externally observable outputs.
 
 ## Repository Structure
+```text
 /Raina‑AI Technical Volume (Complete Edition).pdf   # Final paper
 /Raina‑AI Technical Volume (Complete Edition).md    # Source manuscript
 /README.md
 /LICENSE
-```text
 /docs
  ├── Chapters/             # Main paper (Chapter 1–7)
  ├── Appendix/             # Appendix A–F
