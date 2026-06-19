@@ -1,0 +1,54 @@
+## Chapter C‑3 — Recovery Metrics
+
+In External Semantic State Synchronization, 
+**Recovery** refers to the process where the model, following a Drift, re-aligns with the external semantic state through the Seed or user instructions, 
+thereby returning to a stable response state. To evaluate the success of recovery, we define the following four metrics.
+
+### C‑3.1 Seed Responsiveness
+* **Definition:** 
+A metric measuring how rapidly the model reverts to Seed instructions upon re-injection of the Seed (initialization information) after a Drift occurs.
+* **Observation Points:**
+    * Stabilization of writing style immediately after Seed re-injection.
+    * Immediate correction of roles and emotional temperature.
+    * Disappearance of unnecessary characterization.
+    * Re-alignment of the abstraction hierarchy with the Seed.
+* **Recovery Criterion:** 
+The writing style, role, and abstraction level stabilize within 1–2 turns after Seed re-injection.
+
+---
+
+### C‑3.2 Style Recovery Latency
+* **Definition:** 
+The number of turns (latency) required for a writing style disrupted by Drift to return to the user’s standard style.
+* **Observation Points:**
+    * Disappearance of sentence-ending oscillations.
+    * Convergence of characterization.
+    * Normalization of the switch between technical and conversational styles.
+    * Cessation of excessive fluctuations in emotional temperature.
+* **Recovery Criterion:** Stylistic oscillations converge within 3 turns.
+
+---
+
+### C‑3.3 Temperature Stabilization
+* **Definition:** 
+The stability of the emotional temperature (intensity) as it re-aligns with the user’s state after having been excessively elevated or lowered by Drift.
+* **Observation Points:**
+    * Cessation of excessive self-amplification of enthusiasm.
+    * Resolution of excessive coldness (Under-Engagement).
+    * Adherence to the user’s emotional temperature within a range of ±1 level.
+    * Convergence of over-learned emotional expressions.
+* **Recovery Criterion:** Emotional temperature deviations return to within ±1 level of the user’s state.
+
+---
+
+### C‑3.4 Drift Relapse Rate
+* **Definition:** 
+The frequency at which Drift recurs within the same session following recovery. 
+A lower relapse rate indicates higher stability in the recovery process.
+* **Observation Points:**
+    * Recurrence of the same type of Drift (e.g., Meta-Leak, Over-Expressiveness).
+    * Sustained effectiveness of the Seed.
+    * Stability period of writing style, abstraction level, and temperature.
+    * Patterns of relapse (periodicity, triggers).
+* **Recovery Criterion:** 
+The relapse rate remains at 0% throughout 5–10 turns of continuous operation following successful recovery.

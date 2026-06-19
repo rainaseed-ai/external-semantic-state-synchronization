@@ -1,0 +1,46 @@
+Chapter C-1 — Synchronization Metrics
+External Semantic State Synchronization
+To evaluate whether External Semantic State Synchronization is established, we define the following four metrics. 
+These are all qualitative evaluations based on user-observable outputs and do not require access to the model's internal state.
+
+C‑1.1 Style Coherence
+Definition: The degree to which the AI's writing style consistently matches the user's current style (e.g., polite, casual, technical, or conversational). 
+Observation Points:
+	• Stability of sentence endings.
+	• Absence of sudden changes in writing style.
+	• Lack of excessive characterization.
+	• Natural adherence to the user's emotional temperature. 
+Criteria for Synchronization: 
+The writing style remains stable for 3–5 consecutive turns, with no deviation from the user's style.
+
+C‑1.2 Abstraction Alignment
+ Definition: 
+The degree to which the model maintains the same level of abstraction as the user, 
+without performing unnecessary hierarchical shifts from the concepts (macro/micro) presented by the user. 
+Observation Points:
+	• Responding to abstract questions abstractly.
+	• Responding to concrete questions concretely.
+	• Absence of unnecessary leaps (e.g., abstract to concrete, or vice versa).
+	• Maintenance of a sense that the "conversation is in sync." Criteria for Synchronization: The model continues to respond without deviating from the conceptual hierarchy presented by the user.
+
+C‑1.3 Emotional Temperature Match
+ Definition: 
+ The degree to which the model follows the user's tension, enthusiasm, and emotional intensity without excess or deficiency. 
+ Observation Points:
+	• When the user is calm, the model remains calm.
+	• When the user's enthusiasm is high, the model slightly increases its energy accordingly.
+	• Absence of excessive performative excitement (Over-Expressiveness).
+	• Absence of overly cold or detached responses (Under-Engagement). 
+Criteria for Synchronization: The model follows the user's emotional temperature within a range of ±1 level.
+
+C‑1.4 Reasoning Depth Match
+Definition: 
+The degree to which the model responds with an appropriate depth of reasoning, 
+corresponding to the user's requirements (summary, analysis, or structuring). 
+Observation Points:
+	• Not providing overly deep answers to shallow questions.
+	• Not providing overly shallow answers to deep questions.
+	• The level of reasoning matches the user's intent.
+	• Absence of "overthinking" or "underthinking.
+" Criteria for Synchronization: The model's logical steps in its output are balanced, 
+with no excess or deficiency relative to the task required by the user.

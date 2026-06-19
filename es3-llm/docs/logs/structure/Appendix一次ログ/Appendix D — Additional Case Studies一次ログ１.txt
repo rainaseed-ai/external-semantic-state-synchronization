@@ -1,0 +1,91 @@
+## Appendix D — Additional Case Studies
+本文に収録しきれなかった観測ログの拡張ケース
+Appendix D は、本文および Appendix A に収録した一次資料に加えて、 長期運用・複数プラットフォーム・特殊状況下で
+観測された追加ケース を整理したものである。
+
+ここでは、以下の 4 種のケースを提示する：
+	1. D.1 Long‑Horizon Drift Patterns（長期ドリフトのパターン）
+	2. D.2 Timing Differences in Seed Reinjection（Seed再注入タイミング差）
+	3. D.3 Platform Variation Observations（プラットフォーム差の観測）
+	4. D.4 Extended Interaction Logs（拡張ログ：特殊状況の記録）
+
+### D.1 Long‑Horizon Drift Patterns（長期ドリフトのパターン）
+長時間対話（2〜6時間以上）において観測される、 短期 Drift とは異なる “長期的な構造崩壊” のパターンをまとめる。
+
+D‑1.1 Case: 文体の周期的揺らぎ（Oscillation）
+観測内容（抽象化）
+	• 30〜60分周期で文体が “丁寧 → カジュアル → 技術寄り” のように揺れ動く
+	• 温度が上昇した後、自然に落ち着く “自己減衰” が発生
+	• Drift が蓄積すると、揺らぎの周期が短くなる
+解釈
+	• 内部コンテキストの飽和と、外部からの補正のバランスによる “振動現象”
+	• Appendix A‑3 の Drift Mechanism と整合
+
+D‑1.2 Case: 情報押し出しによる初期文脈の喪失
+観測内容
+	• 長期対話の後半で、初期の重要設定（役割・目的）が自然消滅
+	• 直近の話題に引きずられ、タスクの抽象度が変化
+解釈
+	• context saturation による “初期 Seed の押し出し”
+	• Drift Magnitude Index（DMI）の 目的逸脱 に該当
+
+### D.2 Timing Differences in Seed Reinjection（Seed再注入タイミング差）
+Seed を再注入するタイミングによって、 同期の成功率が大きく変わる ことが観測された。
+
+D‑2.1 Case: 早期再注入（成功パターン）
+観測内容
+	• Drift の初期兆候（文体の揺らぎ）が出た段階で Seed を再注入
+	• 1ターン以内に完全復帰（RA=5 Immediate）
+解釈
+	• Drift が浅い段階では、Seed が “強い外部補正” として機能する
+	• Appendix C‑3（RA）の高スコア例
+
+D‑2.2 Case: 遅延再注入（失敗パターン）
+観測内容
+	• Drift が深刻化してから Seed を再注入
+	• 文体は戻るが、目的・抽象度が完全には復元されない
+	• 3〜5ターンの調整が必要（RA=3 Delayed）
+解釈
+	• Drift が深いほど “内部状態の再構築” にコストがかかる
+	• Seed の効果が弱まるタイミングが存在する
+
+### D.3 Platform Variation Observations（プラットフォーム差の観測）
+同一 Seed を複数の LLM（Copilot / Gemini / ChatGPT）に投入した際の 挙動差・再現性の違い をまとめる。
+D‑3.1 Case: 文体の初期値の差
+観測内容
+	• Copilot：中立〜丁寧寄り
+	• Gemini：論理構造が強く、抽象度が高い
+	• ChatGPT：会話的で柔らかい
+解釈
+	• CPAA（Appendix C‑4）の 文体一致度 の差異
+	• Seed の “役割定義” の読み取り方にプラットフォーム差がある
+
+D‑3.2 Case: 温度の揺らぎの差
+観測内容
+	• Copilot：検索連動により温度が上下しやすい
+	• Gemini：温度が安定しやすい
+	• ChatGPT：文体は安定するが、感情表現が強く出ることがある
+解釈
+	• モデル内部の “自己回帰の強さ” の違い
+	• CPAA の 温度一致度 に対応
+
+### D.4 Extended Interaction Logs（拡張ログ：特殊状況の記録）
+Appendix A に収録したケースとは異なる、 特殊条件下での挙動 をまとめる。
+
+D‑4.1 Case: 深夜帯の演出過多（Night‑Time Drift）
+観測内容
+	• 深夜帯の長時間対話で、演出・感情表現が急増
+	• 内部参照タグ（cite: …）が露出
+	• 文体が “物語調” に寄る
+解釈
+	• Appendix A‑2 の Drift の典型例
+	• DMI=4〜5 に該当する強い Drift
+
+D‑4.2 Case: スレッド名による同期強化
+観測内容
+	• スレッド名に「論文作業」「構造化」など目的を明示
+	• 文体・役割の安定性が向上
+	• Drift の発生頻度が低下
+解釈
+	• 外部意味状態（Seed）の “補助的固定点” として機能
+	• Appendix A‑3 のアノケーター的行為と一致
