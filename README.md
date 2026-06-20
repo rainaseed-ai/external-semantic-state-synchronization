@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20775241.svg)](https://doi.org/10.5281/zenodo.20775241)
+
 # External Semantic State Synchronization in LLMs
 ### A Multi-Platform Observational Study on Drift, Recovery, and Cross-Session Continuity
 
